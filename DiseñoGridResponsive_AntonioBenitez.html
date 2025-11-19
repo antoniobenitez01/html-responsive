@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, receta, bizcocho, azucar, comida, cocinar, cocina, yogurt, yogur, casero"/>
+        <style>
+
+            @import url('https://fonts.cdnfonts.com/css/playstation');
+            span{color:rgb(255, 255, 255)}
+            h1, p{font-family:'Playstation';}
+            a{color:white; text-decoration:none}
+           
+            /*MEDIA QUERY: DESKTOP*/     
+            @media screen and (min-width: 1200px) {
+            html {
+                background-color: rgb(0, 0, 0);
+            }
+            .grid-container {display: grid;
+                            grid-template-areas:
+                            'banner banner banner banner banner'
+                            'front front div2 div2 div3'
+                            'front front div2 div2 div6'
+                            'front front div4 div5 div7';
+                            grid-template-columns:21.6vw 22vw 20vw 20vw 15vw;
+                            grid-template-rows:12vh 43vh 4vh 36vh;
+                            background-color: rgb(0, 0, 0);grid-gap: 3px 3px; grid-gap:3px}
+            .grid-container > div {background-color: rgb(0, 0, 0);text-align: center;font-size: 30px;color:white;}
+
+            @keyframes ScrollX {0% {background-position-x: 0%}100% {background-position-x: 10000vw}}
+            .front > h1{align-self:flex-end; margin-left:1vw; background-color:rgb(0, 0, 0);padding:0.1vw;padding-left:1vw; padding-right:3vw;transition: all 0.4s;}
+            .front > h1:hover{transform: scale(1.05);padding-right:19vw; margin-left:2vw;letter-spacing: 2px}
+            .front > img{width:33vw; position:absolute; left:11vw; top:13vh;}
+            .div2 > .content {display: flex; justify-content: center; align-items:start; width:37vw; height:40vh;}
+            .div2 > .content > p{width:35vw; height:35vh;margin:0;padding:1vw 1vh;word-wrap:break-word;text-align:left; color:rgb(205, 216, 255); font-size:0.90em}
+            .banner > a > img{width:20vw}
+            }
+
+            /*MEDIA QUERY: TABLET*/
+            @media screen and (max-width: 1200px) {
+            html {
+                background-color: rgb(0, 0, 0);
+            }
+            .grid-container {display: grid;
+                            grid-template-areas:
+                            'banner banner'
+                            'front front'
+                            'div2 div2'
+                            'div3 div5'
+                            'div3 div4'
+                            'div3 div7'
+                            'div6 blank';
+                            grid-template-columns:54vw 40vw;
+                            grid-template-rows:6vh 47vh 30vh 30vh 30vh 30vh 4vh;
+                            background-color: rgb(0, 0, 0);grid-gap:10px}
+            .grid-container > div {background-color: rgb(0, 0, 0);text-align: center;font-size: 30px;color:white;}
+
+            @keyframes ScrollX {0% {background-position-x: 0%}100% {background-position-x: 25000vw}}
+            .front > h1{align-self:flex-end; font-size:1.5em; margin-left:2vw;margin-bottom:2vh; background-color:rgb(0, 0, 0);padding:0.1vw;padding-left:1vw; padding-right:3vw;transition: all 0.4s;}
+            .front > img{width:300px;position:absolute; left:50vw; top:12vh;}
+            .front > h1:hover{transform: scale(1.05);padding-right:25vw; margin-left:3vw;letter-spacing: 2px}
+            .div2 > .content {display: flex; justify-content: center; align-items:start; width:80vw; height:40vh;}
+            .div2 > .content > p{width:100vw; height:35vh;margin:0;padding:1vw 1vh;word-wrap:break-word;text-align:left; color:rgb(205, 216, 255); font-size:0.7em}
+            .banner > a > img{width:35vw; margin-top:1.25vh}
+            }
+            
+            /*MEDIA QUERY: PHONE*/
+                        @media screen and (max-width: 501px) {
+            html {
+                background-color: rgb(0, 0, 0);
+            }
+            .grid-container {display: grid;
+                            grid-template-areas:
+                            'banner banner'
+                            'front front'
+                            'div2 div2'
+                            'div3 div3'
+                            'div6 div6'
+                            'div4 div5'
+                            'div8 div7';
+                            grid-template-columns:45.75vw 45.75vw;
+                            grid-template-rows:7vh 47vh 26vh 70vh 3vh 25vh 25vh;
+                            background-color: rgb(0, 0, 0);}
+            .grid-container > div {background-color: rgb(0, 0, 0);text-align: center;font-size: 30px;color:white;}
+
+            @keyframes ScrollX {0% {background-position-x: 0%}100% {background-position-x: 25000vw}}
+            .front > h1{align-self:flex-end; font-size:1.5em; margin-left:4vw;margin-bottom:2vh; background-color:rgb(0, 0, 0);padding:0.1vw;padding-left:1vw; padding-right:3vw;transition: all 0.4s;}
+            .front > img{width:55vw; position:absolute; left:39vw; top:15%;}
+            .front > h1:hover{transform: scale(1.05);padding-right:25vw; margin-left:6vw;letter-spacing: 2px}
+            .div2 > .content {display: flex; justify-content: center; align-items:start; width:90vw; height:40vh;}
+            .div2 > .content > p{width:100vw; height:35vh;margin:0;padding:1vw 1vh;word-wrap:break-word;text-align:left; color:rgb(205, 216, 255); font-size:0.5em}
+            .banner > a > img{width:30vw; margin-top:1.25vh}
+            }
+
+            body{background-color:rgb(0, 0, 0)}
+            .front {grid-area: front;background-image: url("back2.png");display:flex;background-position: 50% 50%;background-size: 150% 150%;background-size: cover;animation: ScrollX 2000s linear infinite}
+            .front > img{transition: all 0.2s;z-index: 0;}
+            .front > img:hover{transform: scale(1.01)}
+            .div2 {grid-area: div2; display: flex; padding-top:3vh;align-items:center; flex-direction:column}
+            .div3 {grid-area: div3;background-image: url("gta.jpg");background-size: cover; background-repeat:no-repeat}
+            .div4 {grid-area: div4; background-image: url("menu.jpg");background-size: cover; background-repeat:no-repeat}
+            .div5 {grid-area: div5; background-image: url("conf.jpeg");background-size: cover; background-repeat:no-repeat}
+            .div6 {grid-area: div6;display:flex;justify-content:center; align-items:center}
+            .div6 > a > p{transition: all 0.2s}
+            .div6 > a > p:hover{transform:scale(1.02);letter-spacing: 2px}
+            .div6 > a > p:active{color:rgb(31, 45, 82)}
+            .div7 {grid-area: div7; background-image: url("e32.jpg");background-size: cover; background-repeat:no-repeat}
+            .div8 {grid-area: div8; background-image: url("e31.jpg");background-size: cover; background-repeat:no-repeat}
+            .blank {grid-area:blank;}
+            .banner {grid-area: banner;display:flex; align-items:center;justify-content:center;}
+            .banner > a > img {transition: all 0.1s;}
+            .banner > a > img:hover{transform: scale(1.05)}
+            .banner > a > img:active{opacity:50%}
+        </style>
+    </head>
+    <body>        
+        <div class="grid-container">
+            <div class="banner" style="background-color:black"><a href="https://en.wikipedia.org/wiki/PlayStation_2"><img src="logo.png"></a></div>
+            <div class="front"><h1 style="z-index: 1;">PlayStation 2</h1><img src="ps2fat.png"></div>
+            <div class="div2"><div class="content"><p>The <span><i>PlayStation 2</i> (PS2)</span> is a home video game console developed and marketed by <span><i>Sony Computer Entertainment</i></span>. 
+                It was first released in <span>Japan on 4 March 2000</span>, in North America on <span>26 October 2000</span>, in Europe on <span>24 November 2000</span>, in Australia on <span>30 November 2000</span>,
+                and other regions thereafter. It is the best-selling video game console of all time, having sold over <span>160 million units</span> worldwide, 
+                <img src="sonylogo.png" style="width:17vw;float:right; margin:1vw 1vh; margin-top:5.5vh">nearly triple the combined sales of its competing consoles. </p></div></div>
+            <div class="div3"></div>  
+            <div class="div4"></div>
+            <div class="div5"></div>
+            <div class="div6" style="background-color:black"><a href="https://wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas"><p>Best Selling Game</p></a></div>
+            <div class="div7"></div>
+            <div class="div8"></div>
+          </div>
+    </body>
+</html>
